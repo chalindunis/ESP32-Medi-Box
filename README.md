@@ -5,5 +5,6 @@ The diagram designed in the Wokwi platform
 ![image](https://github.com/chalindunis/ESP32-Medi-Box/assets/81397441/90fb129d-4d64-420d-8b22-1a9951a9a5d5)
 
 The Wokwi simulation platform
-![image](https://github.com/chalindunis/ESP32-Medi-Box/assets/81397441/90a267db-1d23-46c0-a799-d1f95791d7b9)
+![Screenshot (163)](https://github.com/chalindunis/ESP32-Medi-Box/assets/81397441/5ae1b28f-a4f5-4de3-959c-e49e9c3a7bc1)
+
 
