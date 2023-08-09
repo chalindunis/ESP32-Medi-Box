@@ -1,0 +1,57 @@
+{
+  "version": 1,
+  "author": "Chalindu Abeywansa",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-esp32-devkit-v1", "id": "esp", "top": 23.9, "left": 47.8, "attrs": {} },
+    {
+      "type": "wokwi-dht22",
+      "id": "dht1",
+      "top": -28,
+      "left": 491.11,
+      "attrs": { "temperature": "19.8", "humidity": "86" }
+    },
+    {
+      "type": "wokwi-buzzer",
+      "id": "bz1",
+      "top": 9.12,
+      "left": -153.45,
+      "attrs": { "volume": "0.1" }
+    },
+    {
+      "type": "wokwi-photoresistor-sensor",
+      "id": "ldr1",
+      "top": 251.1,
+      "left": 4.37,
+      "attrs": {}
+    },
+    { "type": "wokwi-servo", "id": "servo1", "top": -138.29, "left": 69.95, "attrs": {} },
+    { "type": "wokwi-ds1307", "id": "rtc1", "top": -107.69, "left": 351.97, "attrs": {} }
+  ],
+  "connections": [
+    [ "esp:TX0", "$serialMonitor:RX", "", [] ],
+    [ "esp:RX0", "$serialMonitor:TX", "", [] ],
+    [ "dht1:GND", "esp:GND.1", "black", [ "v38.34", "h-22.53", "v-0.05" ] ],
+    [ "dht1:VCC", "esp:3V3", "red", [ "v51.5", "h-72.02" ] ],
+    [ "dht1:SDA", "esp:D15", "green", [ "v0" ] ],
+    [ "bz1:1", "esp:GND.2", "black", [ "v0" ] ],
+    [ "bz1:2", "esp:D18", "green", [ "v0" ] ],
+    [ "ldr1:VCC", "esp:3V3", "red", [ "h39.66", "v-90.44" ] ],
+    [ "ldr1:GND", "esp:GND.1", "black", [ "h21.7", "v-124.38" ] ],
+    [
+      "ldr1:AO",
+      "esp:VP",
+      "green",
+      [ "h40.37", "v31.05", "h-1.43", "v7.86", "h-250.68", "v-115.29", "h63.03", "v-164.55" ]
+    ],
+    [ "servo1:PWM", "esp:D25", "green", [ "h-19.22", "v43.66", "h-45.81", "v145.76" ] ],
+    [ "servo1:V+", "esp:3V3", "green", [ "h-12.44", "v84.75", "h155.2", "v173.07" ] ],
+    [ "servo1:GND", "esp:GND.2", "black", [ "h-80.17", "v66.03" ] ],
+    [ "rtc1:GND", "esp:GND.1", "black", [ "h-70.76", "v265.59" ] ],
+    [ "rtc1:5V", "esp:3V3", "red", [ "h-50.69", "v265.09" ] ],
+    [ "rtc1:SDA", "esp:D21", "green", [ "h-33.63", "v159.99" ] ],
+    [ "rtc1:SCL", "esp:D22", "green", [ "h-22.92", "v120.17" ] ],
+    [ "esp:GND.2", "esp:GND.1", "black", [ "h0" ] ]
+  ],
+  "dependencies": {}
+}
